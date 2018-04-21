@@ -52,11 +52,11 @@ if(app.get('env') === 'development'){
 else {
   console.log('PRODUCTION ENVIRONMENT for app');
   app.use(session({
-  store: new MongoStore({
-      url: 'mongodb://base:base@ds163418.mlab.com:63418/blacklistapi',
-      autoRemove: 'interval',
-      autoRemoveInterval: 1 // In minutes. Default
-  }),
+  //store: new MongoStore({
+      //url: 'mongodb://base:base@ds163418.mlab.com:63418/blacklistapi',
+      //autoRemove: 'interval',
+      //autoRemoveInterval: 1 // In minutes. Default
+  //}),
   secret: 'i-koos-Seun',
   resave: false,
   saveUninitialized: true
