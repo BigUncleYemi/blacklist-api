@@ -15,7 +15,6 @@ var MongoStore  =       require('connect-mongo')(session);
 // var configDB = require('./config/database.js');
 
 var port = process.env.PORT || (process.argv[2] || 3001);
-port = (typeof port === "number") ? port : 3001;
 
 var server = app.listen(port);
 console.log("Application started. Listening on port:" + port);
