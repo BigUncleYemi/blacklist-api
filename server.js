@@ -10,6 +10,7 @@ var morgan       = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var session      = require('express-session');
+var MongoStore  =       require('connect-mongo')(session);
 
 // var configDB = require('./config/database.js');
 
@@ -52,11 +53,11 @@ if(app.get('env') === 'development'){
 else {
   console.log('PRODUCTION ENVIRONMENT for app');
   app.use(session({
-  //store: new MongoStore({
-      //url: 'mongodb://base:base@ds163418.mlab.com:63418/blacklistapi',
-      //autoRemove: 'interval',
-      //autoRemoveInterval: 1 // In minutes. Default
-  //}),
+  store: new MongoStore({
+      url: 'mongodb://base:base@ds163418.mlab.com:63418/blacklistapi',
+      autoRemove: 'interval',
+      autoRemoveInterval: 1 // In minutes. Default
+  }),
   secret: 'i-koos-Seun',
   resave: false,
   saveUninitialized: true
