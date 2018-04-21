@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="shortcut icon" href="assets/favicon.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <title>Blacklist api | Upload form</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/api">
+                Blacklist Api</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="navbar-brand" href="/api/search">Find Entry</a>
+                </li>
+                <li class="active">
+                    <a class="navbar-brand" href="/api">Create Entry</a>
+                </li>
+                <li>
+                    <a class="navbar-brand" href="/api/delete">Delete Entry</a>
+                </li>
+                <!-- <li>
+                        <a class="navbar-brand" href="/api/update">Update Entry</a>
+                    </li> -->
+                <li>
+                    <a class="navbar-brand" href="/logout">logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="jumbotron">
+            <form action="/api/upload" enctype="multipart/form-data" method="post" role="form">
+                <div class="form-group" style="display:inline-flex">
+                    <input type="file" class="form-control" name="upload" multiple>
+                    <input type="submit" value="Upload" class="btn btn-default">
+                </div>
+
+            </form>
+            <form action="/api/sucessful" method="post">
+                <div class="form-group">
+                    <label for="MSISDN">MSISDN :</label>
+                    <input type="text" class="form-control" name="MSISDN" id="MSISDN" pattern="^((234)[0-9]{10})$" placeholder="234XXXXXXXXXX">
+                </div>
+                <div class="form-group">
+                    <label for="operator">Operator :</label>
+                    <input type="text" class="form-control" name="operator" id="MSISDN">
+                </div>
+                <div class="form-group">
+                    <label for="categories">Categories :</label>
+                    <input class="form-control" type="text" name="categories" id="categories">
+                </div>
+                <input type="submit" value="submit" class="btn btn-default">
+            </form>
+        </div>
+    </div>
+    <footer class="footer text-center">
+        <div class="container">
+            <p class="text-muted">
+                <span>&copy;</span>big uncle yemi
+                <span class="fas fa-thumbs-up"></span>
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="/assets/jquery-3.3.1.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+</body>
+
+</html>

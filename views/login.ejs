@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Blacklist Api | Sign-in</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="shortcut icon" href="assets/favicon.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+</head>
+
+<body>
+    <center class="container">
+        <div class="jumbotron text-center">
+            <h1>
+                <span class="fa fa-lock"></span>Blacklist Api</h1>
+                <% if (message.length > 0) { %>
+                    <div class="alert alert-danger"><%= message %></div>
+                <% } %>
+            <form action="/login" method="POST" role="form">
+                <legend>
+                    <span class="fa fa-sign-in"></span>Login</legend>
+
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i>Email </label>
+                    <input type="text" class="form-control" name="email" placeholder="Enter Email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" name="password" placeholder="Enter Password">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+            <hr>
+
+            <p>Don't Have an account? <a href="/signup">Sign-up</a></p>
+            <p>Or go <a href="/">Home</a></p>
+        </div>
+    </center>
+    <div class="panel-footer text-center">
+        <p>
+            <span>&copy;</span>big uncle yemi
+            <span class="fas fa-thumbs-up    "></span>
+        </p>
+    </div>
+</body>
+
+</html>
